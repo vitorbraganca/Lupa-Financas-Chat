@@ -1,0 +1,110 @@
+
+#cf-context {
+    width: 100vw;
+    height: 100vh;
+}
+#form {
+    height: 0px;
+    overflow: hidden;
+}
+
+.formulario {
+    background-color: #817BE6;
+    height: 100vh;
+}
+
+.form-apresentacao {
+    min-height: 10vh;
+    max-height: 20vh;
+    width: 40vw;
+    background: linear-gradient(135deg, rgb(64, 29, 186) 0%, rgb(130, 91, 240) 100%);
+    color: white;
+    margin: 10vh auto auto auto;
+    padding: 2% 3%;
+    box-shadow: 3px 4px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.form-apresentacao h1 {
+    font-family: Montserrat, serif;
+    font-weight: 800;
+}
+
+.form-apresentacao h2 {
+    font-weight: 600;
+    font-size: 1.15rem;
+}
+
+#cf-context {
+    position: relative;
+    margin: 0 auto;
+    background: linear-gradient(135deg, rgb(64, 29, 186) 0%, rgb(130, 91, 240) 100%);
+    width: 40vw;
+    height: 70vh;
+    box-shadow: 4px 4px 4px 2px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+#form {
+    height: 0px;
+    overflow: hidden;
+}
+
+/* Estilo para tablets */
+
+@media only screen and (min-width: 788px) and (max-width: 1250px) {
+
+    .formulario {
+        /*min-height: 10vh;*/
+        /*max-height: 20vh;*/
+        /*width: 100%;*/
+        /*background: linear-gradient(135deg, rgb(64, 29, 186) 0%, rgb(130, 91, 240) 100%);*/
+        /*color: white;*/
+        /*margin: 10vh auto auto auto;*/
+        /*padding: 2% 3%;*/
+        /*box-shadow: 3px 4px 2px 2px rgba(0, 0, 0, 0.3);*/
+    }
+
+    .form-apresentacao {
+        min-height: 10vh;
+        max-height: 20vh;
+        min-width: 60vw;
+        max-width: 90vw;
+        margin: 10vh auto 0;
+        padding: 0;
+    }
+
+    #cf-context {
+        min-width: 60vw;
+        max-width: 90vw;
+        height: 70vh;
+        margin: 0 auto;
+        padding: 0;
+    }
+}
+
+
+/* ESTILO PARA SMARTPHONES */
+@media only screen and (max-width: 787px) {
+
+    .form-apresentacao {
+        min-height: 10vh;
+        max-height: 20vh;
+        min-width: 90vw;
+        max-width: 90vw;
+        margin: 0vh auto 0;
+        padding: 3% 3%;
+    }
+
+    #cf-context {
+        min-width: 90vw;
+        max-width: 90vw;
+        height: 70vh;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .header_menu {
+        text-align: right;
+        margin-top: -5%;
+    }
+    }

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Lupa - Simule Grátis</title>
+
+    <meta name="description"
+          content="Simulação grátis da Lupa, assistente da  Lupa nas Finanças">
+
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta property="og:title" content="Simulação grátis pela Lupa"/>
+    <meta property="og:site_name" content="Lupa nas Financas">
+    <meta property="og:type" content="website"/>
+    <meta property="og:description"
+          content="Simulação grátis da Lupa, assistente da  Lupa nas Finanças">
+    <meta property="og:url" content="http://lupanasfinancas.vitorbraganca.com/simulacao.html"/>
+    <meta property="og:image"
+          content="http://lupanasfinancas.vitorbraganca.com/img/introducao-img.png"/>
+
+
+    <!-- Stilos -->
+    <link rel="stylesheet" type="text/css" href="./css/reset.css">
+    <link rel="stylesheet" type="text/css" href="./css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="./css/grid.css">
+    <link rel="stylesheet" type="text/css" href="./css/styles.css">
+    <link rel="stylesheet" type="text/css" href="./css/responsivo.css">
+    <link rel="stylesheet" type="text/css" href="./css/menu-mobile.css">
+
+    <!-- Fontes -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./img/favicon.svg">
+
+    <!-- Script -->
+    <script>document.documentElement.classList.add("js");</script>
+
+
+</head>
+<body>
+
+<!-- Header Section -->
+<header class="header chat">
+    <div class="container">
+        <a href="./index.html" class="grid-2 header_logo">
+            <img src="./img/logo.svg" alt="Lupa nas financas">
+        </a>
+        <nav class="header_menu">
+            <button data-menu="button" aria-expanded="false" aria-controls="menu">Menu</button>
+            <ul class="chat-menu grid-14" data-menu="list2" id="menu">
+                <!--                    MUDAR CAMINHO PARA PAGINAS DEFINITIVAS-->
+                <li><a href="./sobre.html">Sobre</a></li>
+                <li><a href="cursos.html">Cursos</a></li>
+
+                <li id="mobile-simule"><a href="./simulacao.html">Simule grátis</a></li>
+                <li id="header-btn-li"><a id="header-btn" href="./simulacao.html">Simule
+                    grátis</a></li>
+            </ul>
+        </nav>
+<!--        <a id="mobile-btn" href="./simulacao.html">Simule grátis</a>-->
+
+    </div>
+</header>
+<!-- Header Section End -->
+
+<section class="formulario">
+    <div class="container">
+        <div class="form-apresentacao">
+            <h1>🔍 Lupa</h1>
+            <h2>Status: &#128994; <strong>SEMPRE</strong> Online</h2>
+        </div>
+        <form  method="POST" action="./enviar.php" id="form">
+
+            <!--     Introducao -->
+            <cf-robot-message cf-questions="Olá 👋 Eu sou a Lupa!"></cf-robot-message>
+            <cf-robot-message
+                    cf-questions="Fui criada para te ajudar a transformar o seu saldo em investimentos"></cf-robot-message>
+
+            <fieldset
+                    cf-questions="Gostaria de uma simulação grátis e saber como transformar seu saldo em investimentos?" cf-input-placeholder="Digite para filtrar" >
+                <label for="intro-yes">Sim, claro!
+                    <input type="radio" name="cfc-intro" id="intro-yes" value="yes"
+                           cf-error="Não entendi... Por favor, selecione uma das duas opções"/>
+                </label>
+
+                <label for="intro-no">Não, não preciso disso...
+                    <input type="radio" name="cfc-intro" id="intro-no" value="no"
+                           cf-error="Não entendi... Por favor, selecione uma das duas opções"/>
+                </label>
+
+            </fieldset>
+
+            <!--    Fim Introducao / Inicio Form -->
+            <!-- Input Nome -->
+            <cf-robot-message
+                    cf-questions="Você já sabe quem eu sou e o que eu faço... Vamos nos conhecer melhor?"
+                    cf-conditional-cfc-intro="yes"
+            ></cf-robot-message>
+            <input type="text" name="leadNome"
+                   cf-questions="Qual o seu nome? Fique tranquilX, já lhe perguntarei como você prefere ser chamado!"
+                   cf-conditional-cfc-intro="yes"
+                   cf-error="Esse nome não parece estar correto... &#9785;️"
+                   cf-input-placeholder="Digite aqui o seu nome"
+                   required/>
+
+            <!--    Input Apelido -->
+            <cf-robot-message
+                    cf-questions="Entendi, e já anotei no meu caderninho &#128211;!"
+                    cf-conditional-cfc-intro="yes"
+            ></cf-robot-message>
+            <cf-robot-message cf-questions="Sabia que meu nome originalmente era RoboFormosa V2?"
+                              cf-conditional-cfc-intro="yes"
+            ></cf-robot-message>
+            <cf-robot-message cf-questions="Nem sempre gostamos de ser chamados pelo nosso nome, certo? "
+                              cf-conditional-cfc-intro="yes"
+            ></cf-robot-message>
+            <input type="text" name="leadApelido"
+                   cf-questions="Pensando nisso, como você gostaria de ser chamado?"
+                   cf-conditional-cfc-intro="yes"
+                   cf-error="Esse nome não parece estar correto... &#9785;️"
+                   cf-input-placeholder="Digite aqui como gostaria de ser chamado"
+                   required/>
+            <cf-robot-message
+                    cf-questions="{leadApelido}, que nome incrível! Já anotei aqui!"
+                    cf-conditional-cfc-intro="yes"></cf-robot-message>
+
+            <!--    Input Email-->
+            <input type="email" name="leadEmail"
+                   cf-questions="Agora preciso saber como entrar em contato com você! Qual o seu melhor e-mail?"
+                   cf-conditional-cfc-intro="yes"
+                   cf-error="Esse e-mail não parece correto... &#9785;️"
+                   cf-input-placeholder="Digite aqui o seu e-mail"
+                   required/>
+
+            <!--    Input telefone -->
+            <input type="number" name="leadTelefone"
+                   cf-questions="Só mais uma, prometo! Qual o seu número de telefone, COM O DDD, pra gente se falar depois?"
+                   cf-conditional-cfc-intro="yes"
+                   cf-input-placeholder="Digite aqui seu número de telefone"
+                   cf-error="Esse número não parece correto... &#9785;️"
+                   required>
+
+            <cf-robot-message cf-questions="Agora que já tenho como entrar em contato com você, vamos ao que interessa agora?"
+                              cf-conditional-cfc-intro="yes"
+            ></cf-robot-message>
+
+            <input type="number" name="leadRendaMensal"
+                   cf-questions="Qual a sua renda mensal, aproximadamente?"
+                   cf-conditional-cfc-intro="yes"
+                   cf-input-placeholder="Digite aqui a sua renda mensal"
+                   required/>
+
+
+            <input type="number" name="leadGastoMensal"
+                   cf-questions="Uau! Desses R${leadRendaMensal}, quanto você gasta por mês?"
+                   cf-conditional-cfc-intro="yes"
+                   cf-input-placeholder="Digite aqui seus gastos mensais"
+                   required/>
+
+            <!--    TENTAR IMPLEMENTAR O CALCULO EM TEMPO REAL, ENQUANTO ISSO, VAI SER DEPOIS MESMO -->
+            <cf-robot-message
+                    cf-questions="Ótimo, {leadNome}! Já anotei tudinho, vou fazer alguns cálculos e envio para o seu e-mail em alguns instantes!"
+                    cf-conditional-cfc-intro="yes"
+            ></cf-robot-message>
+
+            <!-- CALL TO ACTION -> AULAS ONLINE -->
+
+            <!-- Caso resposta seja NAO-->
+            <cf-robot-message cf-questions="Ok... Se mudar de ideia, estarei aqui!" cf-conditional-cfc-intro="no"
+            ></cf-robot-message>
+
+        </form>
+
+        <div id="cf-context" role="cf-context" cf-context></div>
+    </div>
+</section>
+
+
+<section class="saldo">
+    <div class="container">
+
+        <h1 class="subtitulo">Aumente o seu saldo</h1>
+        <p>Sabia que com algumas atitudes você consegue economizar, aumentar o seu saldo,
+            transformá-lo em investimentos e realizar seus sonhos e satisfazer suas vontades?</p>
+        <p>Quer aprender como?</p>
+        <div class="saldo-botoes">
+
+            <a class="btn" id="aprender">Quero aprender!</a>
+            <a class="btn" id="nao-preciso">Não preciso disso</a>
+
+        </div>
+    </div>
+
+    </div>
+
+    <div class="pena" id="pena">
+        <h2 class="subtitulo">Que pena... :(</h2>
+        <p>Queríamos você conosco para aprender formas de economizar no orçamento familiar e
+            transformar seu saldo em investimentos.</p>
+        <p>Se mudar de ideia, estaremos aqui!</p>
+        <div class="call">
+            <p>Caso interesse, você pode acessar nossos cursos aqui.</p>
+            <a href="aulas.php" class="btn">Cursos</a>
+        </div>
+    </div>
+
+    <div class="call-aprender" id="call-aprender">
+        <h2 class="subtitulo">Oba!</h2>
+        <p>Que bom que você tem interesse em economizar no orçamento familiar e transformar seu
+            saldo em investimentos!</p>
+        <p>Nós podemos te ajudar com isso através de nossos cursos!</p>
+        <div class="call">
+            <p>Acesse nossos cursos aqui.</p>
+            <a href="aulas.php" class="btn">Cursos</a>
+        </div>
+    </div>
+
+</section>
+
+
+<!-- Footer Section -->
+<footer>
+    <div class="footer">
+        <div class="container">
+            <div class="grid-8 footer_historia">
+                <h3>Nossa historia</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, ab,
+                    architecto beatae, deleniti deserunt doloremque ipsam magni nihil nisi
+                    sit soluta tempore voluptatem voluptatum. Quas quibusdam saepe sint ullam
+                    voluptate!</p>
+            </div>
+
+            <div class="grid-4 footer_contato">
+                <h3>Contato</h3>
+                <ul>
+                    <li>(31) 9999-9999</li>
+                    <li>contato@email.com</li>
+                    <li>Belo Horizonte - MG</li>
+                </ul>
+            </div>
+
+            <div class="grid-4 footer_redes">
+                <h3>Redes sociais</h3>
+                <ul>
+                    <li><a href="#" target="_blank">
+                        <img src="img/redes-sociais/instagram.svg"></a></li>
+                    <li><a href="#" target="_blank">
+                        <img src="img/redes-sociais/facebook.svg"></a></li>
+                    <li><a href="#" target="_blank">
+                        <img src="img/redes-sociais/linkedin.svg"></a></li>
+                </ul>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="copy">
+        <div class="container">
+            <div class="grid-7">
+                <p>Lupa nas Finanças 2020</p>
+                <p> Todos os direitos reservados.</p>
+            </div>
+            <div class="grid-8">
+                <nav class="footer_menu">
+                    <ul>
+                        <!--                             MUDAR CAMINHO PARA PAGINAS DEFINITIVAS-->
+                        <li><a href="./sobre.html">Sobre</a></li>
+                        <li><a href="cursos.html">Cursos</a></li>
+                        <li><a href="#">Login</a></li>
+                        <li id="footer-btn-li"><a id="footer-btn" href="./simulacao.html">
+                            Simule</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+</footer>
+<!-- Footer Section End -->
+
+<script type="text/javascript" src="./js/main-form.js" crossorigin></script>
+<script type="module" src="./js/script.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/space10-community/conversational-form@1.0.1/dist/conversational-form.min.js" crossorigin></script>
+
+
+</body>

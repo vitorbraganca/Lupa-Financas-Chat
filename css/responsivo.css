@@ -1,0 +1,144 @@
+
+
+/* Estilo para tablets */
+
+@media only screen and (min-width: 768px) and (max-width: 979px) {
+    /* Header */
+    .header {
+        position: relative;
+        height: 13vh;
+        padding: 1% 0;
+    }
+
+    .btn {
+        font-size: 0.8rem;
+    }
+
+    .call-lupa .btn {
+        font-size: 0.8rem;
+    }
+
+    .titulo-interno {
+        margin-top: 0;
+    }
+
+    .titulo-sobre {
+        font-size: 2.75rem;
+    }
+    .quem-somos {
+        clear: both;
+        margin-bottom: 320px;
+    }
+    .sobre-texto {
+        width: 340px;
+    }
+    .sobre-imagem {
+        margin-top: 80px;
+        width: 380px;
+        height: 240px;
+        margin-left: 18px;
+    }
+    .texto-gd {
+        width: 80vw;
+    }
+
+}
+
+/* ESTILO PARA SMARTPHONES */
+@media only screen and (max-width: 787px) {
+
+    .grid-1, .grid-2, .grid-3, .grid-4, .grid-5, .grid-6, .grid-7, .grid-8, .grid-9, .grid-10, .grid-11, .grid-12, .grid-13, .grid-14, .grid-15, .grid-16, .grid-1-3 {
+        width: 90%;
+        margin: 0 auto;
+        float: none;
+    }
+
+    /* HEADER MOBILE*/
+    .header {
+        position: relative;
+        height: 25vh;
+    }
+
+    .header img {
+        margin: 0 auto 8%;
+    }
+
+    .header_menu {
+        margin: 0 auto 5%;
+        align-content: center;
+    }
+
+    #mobile-simule {
+        display: block;
+    }
+
+    #header-btn-li {
+        display: none;
+    }
+
+    #mobile-btn {
+        text-align: center;
+        width: 50vw;
+        display: block;
+        margin: 0 auto;
+        background-color: #817BE6;
+        padding: 5% 10%;
+        border-radius: 15px;
+        color: white;
+        transition: 500ms;
+    }
+
+    #mobile-btn:hover {
+        background-color: white;
+        color: black;
+    }
+
+    /* FOOTER */
+    .footer {
+        max-height: 100%;
+        text-align: center;
+    }
+
+    .footer h3:after {
+        margin: 6px auto 12px auto;
+    }
+
+    .footer .footer_historia {
+        margin: 5% auto;
+        padding: 0;
+    }
+
+    .footer .footer_historia h3 {
+        text-align: center;
+    }
+    
+    /*COPY*/
+    .copy .grid-7, .copy .grid-8 {
+        margin: 0 auto 3%;
+    }
+    .copy, .footer_menu {
+        text-align: center;
+    }
+
+    
+
+
+    /* CONTEUDO */
+    /*CALL TO ACTION MOBILE*/
+    .call-lupa h3 {
+        width: 85%;
+    }
+
+    .call-lupa {
+        padding-bottom: 5%;
+    }
+
+    .titulo-interno {
+        margin-top: 0;
+    }
+
+    .quem-somos {
+        margin-bottom: 5%;
+    }
+}
+
